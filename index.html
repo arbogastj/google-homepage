@@ -5,38 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
     <style>
-     
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 10em;
+        }
+
+        /* Styling links */
+        a:link {text-decoration: none;}
+        a:visited {color: #222; text-decoration: none;}
+        a:hover {text-decoration: underline;}
+        a:active {text-decoration: none;}
+
+        .header {
+            display: flex;
+        }
+
+        .top-left {
+            display: inline-block;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 2px;
+            
+        }
+        .top-right {
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 2px;
+        }
+
+        .footer {
+        background-color: lightgray;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        }
+
+        .bottom-right {
+            width: auto;
+            float: right;
+            padding: 10px;
+        }
+        .bottom-left {
+            width: auto;
+            float: left;
+            padding: 10px;
+        }
+
+        .d1{background:LightSkyBlue;}
+        .d2{background:LightSalmon;}
+        .d3{background:PaleTurquoise;}
+        .d4{background:LightPink;}
+        .d5{background:PaleGreen;}
     </style>
 </head>
 <body>
     <header>
         <nav role='navigation'>
-            <a href="#">About</a>
-            <a href="#">Store</a>
-            <a href="#">Gmail</a>
-            <a href="#">Images</a>
+            <div class="top-left">
+                <a href="#">About</a>
+            </div>
+
+                <a href="#">Store</a>
+ 
+            
+            <span class="top-right">
+                <a href="#">Gmail</a>
+                <a href="#">Images</a>
+            </span>
+           
         </nav>
     </header>
+
     <div>
-        <p>About</p>
+        <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
     </div>
     <div>
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-    </div>
-    <div>
+        
         <form action="#">
-            <input>
+            <input type="text">
           </form>
     </div>
-    <footer>
-        <a href="#">Images</a>
-        <a href="#">Images</a>
-        <a href="#">Images</a>
-        <a href="#">Images</a>
-        <a href="#">Images</a>
-        <a href="#">Images</a>
-        <a href="#">Images</a>
+    <div>
+        <p>Google Search</p>
+        <p>I'm Feeling Lucky</p>
+    </div>
+    <footer class="footer">
+        <div class="d1 bottom-left"><a href="#">Advertising</a></div>
+        <div class="d2 bottom-left"><a href="#">Business</a></div>
+        <div class="d3 bottom-left"><a href="#">How Search works</a></div>
+        <div class="d4 bottom-right"><a href="#">Privacy</a></div>
+        <div class="d5 bottom-right"><a href="#">Terms</a></div>
+        <div class="d6 bottom-right"><a href="#">Settings</a></div>
     </footer>
 </body>
 </html>
