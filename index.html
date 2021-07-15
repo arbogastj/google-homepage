@@ -5,26 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     <style>
+        body {
+            height: 100%;
+         
+        }
         .logo {
+            position: fixed;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            padding-top: 10em;
-        }
+            padding-top: 11%;
 
+        }
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;  /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
         /* Styling links */
-        a:link {text-decoration: none;}
-        a:visited {color: #222; text-decoration: none;}
-        a:hover {text-decoration: underline;}
-        a:active {text-decoration: none;}
+        a.link {text-decoration: none; color: black;}
+        a.visited {text-decoration: none; color: black;}
+        a.hover {text-decoration: underline;}
+        a.active {text-decoration: none;}
+
+        a.bottom:link {text-decoration: none; color: #70757a;}
+        a.bottom:visited {text-decoration: none; color: #70757a;}
+        a.bottom:hover {text-decoration: underline;}
+        a.bottom:active {text-decoration: none;}
 
         .header {
             display: flex;
         }
-
+        
         .top-left {
             display: inline-block;
             padding-top: 20px;
@@ -39,28 +63,38 @@
         }
 
         .footer {
-        background-color: lightgray;
+        background-color: #f2f2f2;
         position: fixed;
+        left: 0;
         bottom: 0;
         width: 100%;
+        height: 48px;
+        min-width: 200px;
+        display: block
         }
 
+        
+        .footer-text {
+            color: #70757a;
+        }
+        .spacing {
+            padding-left: 20px;
+        }
         .bottom-right {
+            display: flex;
             width: auto;
             float: right;
-            padding: 10px;
+            padding: 10px 10px 10px 10px;
         }
         .bottom-left {
+            display: flex;
             width: auto;
             float: left;
-            padding: 10px;
+            padding: 10px 10px 10px 10px;
         }
 
-        .d1{background:LightSkyBlue;}
-        .d2{background:LightSalmon;}
-        .d3{background:PaleTurquoise;}
-        .d4{background:LightPink;}
-        .d5{background:PaleGreen;}
+        .d1{padding: 15px; font-family: Arial, sans-serif; font-size: 14px; color: #70757a;}
+    
     </style>
 </head>
 <body>
@@ -77,7 +111,7 @@
                 <a href="#">Gmail</a>
                 <a href="#">Images</a>
             </span>
-           
+            <span class="material-icons">apps</span>
         </nav>
     </header>
 
@@ -95,12 +129,12 @@
         <p>I'm Feeling Lucky</p>
     </div>
     <footer class="footer">
-        <div class="d1 bottom-left"><a href="#">Advertising</a></div>
-        <div class="d2 bottom-left"><a href="#">Business</a></div>
-        <div class="d3 bottom-left"><a href="#">How Search works</a></div>
-        <div class="d4 bottom-right"><a href="#">Privacy</a></div>
-        <div class="d5 bottom-right"><a href="#">Terms</a></div>
-        <div class="d6 bottom-right"><a href="#">Settings</a></div>
+        <div class="d1 bottom-left"><a class="bottom" href="#">Advertising</a></div>
+        <div class="d1 bottom-left"><a class="bottom" href="#">Business</a></div>
+        <div class="d1 bottom-left"><a class="bottom" href="#">How Search works</a></div>
+        <div class="d1 bottom-right"><a class="bottom" href="#">Privacy</a></div>
+        <div class="d1 bottom-right"><a class="bottom" href="#">Terms</a></div>
+        <div class="d1 bottom-right"><a class="bottom" href="#">Settings</a></div>
     </footer>
 </body>
 </html>
