@@ -5,22 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
     <style>
-        body {
-            height: 100%;
-         
-        }
+        
+        /* Styles the Google logo*/
         .logo {
-            position: fixed;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            padding-top: 11%;
-
+            padding-top: 27vh;
         }
+        .form {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            box-shadow: none;
+            height: 44px;
+            color: black;
+            outline: none;
+        }
+        .f1 {
+            display: flex;
+            justify-content: center;
+        }
+        .f2 {
+            padding: 20px 5px 20px 5px;
+        }
+
+        .div-form {
+            padding-top: 20px;
+        }
+
+        input[type=text] {
+            background-image: url('search.svg');
+            background-repeat: no-repeat;
+            background-color: white;
+            padding-left: 40px;
+            background-position: 10px 12px;
+            font-size: 16px;
+        }
+
+        /* Imports Google "apps" button*/
         .material-icons {
             font-family: 'Material Icons';
             font-weight: normal;
@@ -35,10 +67,10 @@
             direction: ltr;
         }
         /* Styling links */
-        a.link {text-decoration: none; color: black;}
-        a.visited {text-decoration: none; color: black;}
-        a.hover {text-decoration: underline;}
-        a.active {text-decoration: none;}
+        a.top:link {text-decoration: none; color: black;}
+        a.top:visited {text-decoration: none; color: black;}
+        a.top:hover {text-decoration: underline;}
+        a.top:active {text-decoration: none;}
 
         a.bottom:link {text-decoration: none; color: #70757a;}
         a.bottom:visited {text-decoration: none; color: #70757a;}
@@ -47,21 +79,60 @@
 
         .header {
             display: flex;
+            flex-wrap: nowrap;
+            top: 0;
+            width: 100%;
+            height: 48px;
+            min-width: 200px;
         }
         
-        .top-left {
-            display: inline-block;
-            padding-top: 20px;
-            padding-left: 10px;
-            padding-right: 2px;
-            
-        }
-        .top-right {
-            padding-top: 20px;
-            padding-left: 10px;
-            padding-right: 2px;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: none;
         }
 
+        .app-button {
+            float: right;
+        }
+        .top-left {
+            display: flex;
+            width: auto;
+            float: left;
+            padding: 20px 10px 15px 15px;
+            text-align: center;
+            align-items: center;
+        }
+        .upper {
+            display: inline-block;
+        }
+        .top-right {
+            display: block;
+            width: auto;
+            flex-grow: 1;
+            padding: 20px 10px 15px 15px;
+            float: right;
+           
+        }
+        .srch-btn {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: 'Roboto',arial,sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+
+        }
         .footer {
         background-color: #f2f2f2;
         position: fixed;
@@ -70,71 +141,75 @@
         width: 100%;
         height: 48px;
         min-width: 200px;
-        display: block
+        display: block;
         }
 
-        
-        .footer-text {
-            color: #70757a;
-        }
-        .spacing {
-            padding-left: 20px;
-        }
         .bottom-right {
-            display: flex;
+            display: block;
             width: auto;
             float: right;
             padding: 10px 10px 10px 10px;
         }
+
         .bottom-left {
             display: flex;
             width: auto;
             float: left;
-            padding: 10px 10px 10px 10px;
+            padding: 11px 10px 10px 10px;
         }
-
-        .d1{padding: 15px; font-family: Arial, sans-serif; font-size: 14px; color: #70757a;}
+        /* Styling for bottom bar*/
+        .d1{padding: 15px; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; color: #70757a;}
+        .d2{color: #222; font-family: 'Roboto', Arial, sans-serif; font-size: 14px;}
     
     </style>
 </head>
 <body>
-    <header>
-        <nav role='navigation'>
-            <div class="top-left">
-                <a href="#">About</a>
+    <!-- Come back to this section later -->
+    <header >
+        <div class="header">
+            <div class="upper">
+                <div class="top-left"><a class="top d2" href="#">About</a></div>
+                <div class="top-left"><a class="top d2" href="#">Store</a></div>
+            </div>
+            <div class="upper">
+                <div><a class="top d2" href="#">Gmail</a></div>
+                <div><a class="top d2" href="#">Images</a></div>
+            </div>
+            <div class="top-right">
+                <div><img src="apps_button.svg"></div>
             </div>
 
-                <a href="#">Store</a>
- 
-            
-            <span class="top-right">
-                <a href="#">Gmail</a>
-                <a href="#">Images</a>
-            </span>
-            <span class="material-icons">apps</span>
-        </nav>
+        </div>
+        
+        <div>
+            <div>
+                
+            </div>
+        </div>
+        
     </header>
-
     <div>
         <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
     </div>
-    <div>
+    <div class="div-form">
+        <form>
+            <div><input class="form" type="text"></div>
+            <div class="f1">
+                <div class="f2"><input class="srch-btn" type="submit" value="Google Search"></div>
+                <div class="f2"><input class="srch-btn" type="submit" value="I'm Feeling Lucky"></div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <ul class="footer">
+            <li class="d1 bottom-left"><a class="bottom" href="#">Advertising</a></li>
+            <li class="d1 bottom-left"><a class="bottom" href="#">Business</a></li>
+            <li class="d1 bottom-left"><a class="bottom" href="#">How Search works</a></li>
+            <li class="d1 bottom-right"><a class="bottom" href="#">Privacy</a></li>
+            <li class="d1 bottom-right"><a class="bottom" href="#">Terms</a></li>
+            <li class="d1 bottom-right"><a class="bottom" href="#">Settings</a></li>
+        </ul>
         
-        <form action="#">
-            <input type="text">
-          </form>
-    </div>
-    <div>
-        <p>Google Search</p>
-        <p>I'm Feeling Lucky</p>
-    </div>
-    <footer class="footer">
-        <div class="d1 bottom-left"><a class="bottom" href="#">Advertising</a></div>
-        <div class="d1 bottom-left"><a class="bottom" href="#">Business</a></div>
-        <div class="d1 bottom-left"><a class="bottom" href="#">How Search works</a></div>
-        <div class="d1 bottom-right"><a class="bottom" href="#">Privacy</a></div>
-        <div class="d1 bottom-right"><a class="bottom" href="#">Terms</a></div>
-        <div class="d1 bottom-right"><a class="bottom" href="#">Settings</a></div>
     </footer>
 </body>
 </html>
