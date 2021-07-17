@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
     <style>
-        
+        body {margin:0;}
+
         /* Styles the Google logo*/
         .logo {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            padding-top: 27vh;
+            padding-top: 20vh;
         }
         .form {
             display: block;
@@ -52,19 +53,21 @@
             font-size: 16px;
         }
 
+
         /* Imports Google "apps" button*/
         .material-icons {
             font-family: 'Material Icons';
             font-weight: normal;
             font-style: normal;
             font-size: 24px;  /* Preferred icon size */
-            display: inline-block;
+            display: block;
             line-height: 1;
             text-transform: none;
             letter-spacing: normal;
             word-wrap: normal;
             white-space: nowrap;
             direction: ltr;
+            opacity: 1;
         }
         /* Styling links */
         a.top:link {text-decoration: none; color: black;}
@@ -77,44 +80,34 @@
         a.bottom:hover {text-decoration: underline;}
         a.bottom:active {text-decoration: none;}
 
-        .header {
-            display: flex;
-            flex-wrap: nowrap;
-            top: 0;
-            width: 100%;
-            height: 48px;
-            min-width: 200px;
+        li {
+            display: inline;
         }
-        
+        li .right {
+            float: right;
+        }
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
             background-color: none;
+            
         }
 
-        .app-button {
-            float: right;
+        img {
+            padding-top: 10px;
         }
         .top-left {
-            display: flex;
-            width: auto;
-            float: left;
-            padding: 20px 10px 15px 15px;
-            text-align: center;
-            align-items: center;
-        }
-        .upper {
-            display: inline-block;
-        }
-        .top-right {
             display: block;
             width: auto;
-            flex-grow: 1;
-            padding: 20px 10px 15px 15px;
+            float: left;
+            padding: 10px 10px 10px 10px;
+        }
+        .top-right {
+            width: auto;
             float: right;
-           
+            padding: 10px 10px 10px 10px;
         }
         .srch-btn {
             background-color: #f8f9fa;
@@ -150,7 +143,7 @@
             float: right;
             padding: 10px 10px 10px 10px;
         }
-
+     
         .bottom-left {
             display: flex;
             width: auto;
@@ -160,34 +153,44 @@
         /* Styling for bottom bar*/
         .d1{padding: 15px; font-family: 'Roboto', Arial, sans-serif; font-size: 14px; color: #70757a;}
         .d2{color: #222; font-family: 'Roboto', Arial, sans-serif; font-size: 14px;}
-    
+        .d3{padding: 5px 5px 5px 5px; display: table-cell; vertical-align: top; align-items: center;}
+
+        .list-top {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: block;
+        }
+        .list-left {
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+        }
+        .list-right {
+            float: right;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+
+
+        }
     </style>
 </head>
 <body>
     <!-- Come back to this section later -->
-    <header >
-        <div class="header">
-            <div class="upper">
-                <div class="top-left"><a class="top d2" href="#">About</a></div>
-                <div class="top-left"><a class="top d2" href="#">Store</a></div>
-            </div>
-            <div class="upper">
-                <div><a class="top d2" href="#">Gmail</a></div>
-                <div><a class="top d2" href="#">Images</a></div>
-            </div>
-            <div class="top-right">
-                <div><img src="apps_button.svg"></div>
-            </div>
-
-        </div>
+        <ul class="list-top">
+            <li class="list-left"><a class="top d2" href="#">About</a></li>
+            <li class="list-left"><a class="top d2" href="#">Store</a></li>
+            <li class="list-right"><a class="top d2" href="#">Gmail</a></li>
+            <li class="list-right"><a class="top d2" href="#">Images</a></li>
+        </ul>
         
-        <div>
-            <div>
-                
-            </div>
-        </div>
-        
-    </header>
     <div>
         <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
     </div>
